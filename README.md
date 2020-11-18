@@ -22,9 +22,9 @@ Select "New" to create a new sketch to paste and run the robot's code.\
 
 ## Description of code:
 
-#include <Servo.h>
+#include <Servo.h>\
 Servo myservo;
 
-####### The first portion of the code declares the Servo.h library that helps the Arduino board control the servo motor.
-####### The next line declares the variable for the servo motor.
+###### The first portion of the code declares the Servo.h library that helps the Arduino board control the servo motor.
+###### The next line declares the variable for the servo motor.
 
