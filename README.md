@@ -9,8 +9,16 @@ Readme file for the code for a robot made for Elementary to Middle grade student
 
 The software needed for this robot is Arduino IDE.
 
-1. The software for the Arduino IDE can be found on https://www.arduino.cc/en/software.
-2. The page offers several download options based on the operating system of the computer.
+* The software for the Arduino IDE can be found on https://www.arduino.cc/en/software.
+* The page offers several download options based on the operating system of the computer.
+* Windows 7 or higher, and Mac OS X 10.10 or newer is preferred.
+    1. Download the software for the laptop's respective OS.
+    2. Run the software.
+    3. Select "New" to create a new sketch to paste and run the robot's code.
+    4. "Verify" compiles the code for errors.
+    5. "Upload" compiles and runs the code.
 
 
-## Beginning of code
+## Description of code:
+
+
