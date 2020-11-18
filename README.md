@@ -17,9 +17,14 @@ Download the software for the laptop's respective OS.\
 Run the software.\
 Select "New" to create a new sketch to paste and run the robot's code.\
 "Verify" compiles the code for errors.\
-"Upload" compiles and runs the code.\
+"Upload" compiles and runs the code.
 
 
 ## Description of code:
 
+#include <Servo.h>
+Servo myservo;
+
+####### The first portion of the code declares the Servo.h library that helps the Arduino board control the servo motor.
+####### The next line declares the variable for the servo motor.
 
