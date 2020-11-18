@@ -32,7 +32,7 @@ The next line declares the variable for the servo motor.
 *************************
 
 int Trig = A2;\
-int Echo = A1;\
+int Echo = A1;
 
 int ENA = 11;\
 int ENB = 5;\
@@ -42,5 +42,6 @@ int IN3 = 6;\
 int IN4 = 3;\
 #define carSpeed 155\
 #define carSpeed2 155\
-int rightDistance = 0, leftDistance = 0;\
+int rightDistance = 0, leftDistance = 0;
 *************************
+This portion of the code declares the variabes for the Trig and Echo pins on the ultrasonic sensor, and it declares the motor pins on the L298N board.
