@@ -23,8 +23,24 @@ Select "New" to create a new sketch to paste and run the robot's code.\
 ## Description of code:
 
 #include <Servo.h>\
-Servo myservo;\
+Servo myservo;
 *************************
 The first portion of the code declares the Servo.h library that helps the Arduino board control the servo motor.\
 The next line declares the variable for the servo motor.
 
+*************************
+*************************
+
+int Trig = A2;\
+int Echo = A1;\
+
+int ENA = 11;\
+int ENB = 5;\
+int IN1 = 7;\
+int IN2 = 9;\
+int IN3 = 6;\
+int IN4 = 3;\
+#define carSpeed 155\
+#define carSpeed2 155\
+int rightDistance = 0, leftDistance = 0;\
+*************************
