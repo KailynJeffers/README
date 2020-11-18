@@ -11,7 +11,7 @@ Readme file for the code for a robot made for Elementary to Middle grade student
 
 * The software for the Arduino IDE can be found on https://www.arduino.cc/en/software.
 * The page offers several download options based on the operating system of the computer.
-* Windows 7 or higher, and Mac OS X 10.10 or newer is preferred.
+* Windows 7 or higher, and Mac OS X 10.10 or newer is preferred./
       
 * Download the software for the laptop's respective OS.
 * Run the software.
