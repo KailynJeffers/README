@@ -70,15 +70,15 @@ void setup() {\
 The setup() function sets the servo motor to pin 10 on the Arduino, initializes the serial monitor that displays the sensor's commands, and sets each pin to output except for Echo which is an input. Then, the ENA and ENB pins are set to high.
 *************************
 *************************
-void loop() {\
+void loop() {
 
   servo.write(60);\
   delay(200);\
-  rightDistance = Distance_test();\
+  rightDistance = Distance_test();
 
   servo.write(120);\
   delay(200);\
-  leftDistance = Distance_test();\
+  leftDistance = Distance_test();
 
   if((rightDistance > 70)&&(leftDistance > 70)){\
     stop();\
@@ -100,6 +100,8 @@ void loop() {\
   }\
   else{\
     stop();\
-  }\
+  }
 
 }
+
+********************************
