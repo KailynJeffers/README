@@ -74,11 +74,11 @@ void loop() {
 
   servo.write(60);\
   delay(200);\
-  rightDistance = Distance_test();
+  rightDistance = distance_test();
 
   servo.write(120);\
   delay(200);\
-  leftDistance = Distance_test();
+  leftDistance = distance_test();
 
   if((rightDistance > 70)&&(leftDistance > 70)){\
     stop();\
@@ -148,3 +148,37 @@ void moveLeft(){\
 The moveLeft() function sets the IN2 and IN4 pins to high and the IN1 and IN3 pins to low. This causes the left wheel to move backward and the right wheel to move forward. This makes the car turn left.
 ********************************
 ********************************
+void moveRight(){\
+  analogWrite(ENA, carSpeed2);\
+  analogWrite(ENB, carSpeed2);\
+  digitalWrite(IN1, HIGH);\
+  digitalWrite(IN2, LOW);\
+  digitalWrite(IN3, HIGH);\
+  digitalWrite(IN4, LOW);\
+  Serial.println("Right");\
+}
+********************************
+The moveLeft() function sets the IN1 and IN3 pins to high and the IN2 and IN4 pins to low. This causes the left wheel to move forward and the right wheel to move backward. This makes the car turn right.
+********************************
+********************************
+void stop(){\
+  digitalWrite(ENA, LOW);\
+  digitalWrite(ENB, LOW);\
+  Serial.println("Stop!");\
+}
+********************************
+The stop() function sets the ENA and ENB pins to low, causing the robot to stop.
+********************************
+********************************
+int distance_test(){\
+  digitalWrite(Trig, LOW);\
+  delayMicroseconds(2);\
+  digitalWrite(Trig, HIGH);\
+  delayMicroseconds(20);\
+  digitalWrite(Trig, LOW);\
+  float Fdistance = pulseIn(Echo, HIGH);\
+  Fdistance = Fdistance / 58;\
+  return (int)Fdistance;\
+}
+*******************************
+The distance_test() function uses the ultrasonic sensor to determine the location of an object in respect to the sensor.
