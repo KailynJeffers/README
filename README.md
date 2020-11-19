@@ -109,3 +109,42 @@ The loop() function uses the ultrasonic sensor to determine which movement funct
 The loop() function uses if/else statements.
 ********************************
 ********************************
+void moveForward(){\
+  analogWrite(ENA, carSpeed);\
+  analogWrite(ENB, carSpeed);\
+  digitalWrite(IN1, HIGH);\
+  digitalWrite(IN2, LOW);\
+  digitalWrite(IN3, LOW);\
+  digitalWrite(IN4, HIGH);\
+  Serial.println("Forward");\
+}
+*******************************
+The moveForward() function sets the IN1 and IN4 pins to high and the IN2 and IN3 pins to low. This causes the left and right wheels to both move forward.
+*******************************
+*******************************
+void moveBack(){\
+  analogWrite(ENA, carSpeed);\
+  analogWrite(ENB, carSpeed);\
+  digitalWrite(IN1, LOW);\
+  digitalWrite(IN2, HIGH);\
+  digitalWrite(IN3, HIGH);\
+  digitalWrite(IN4, LOW);\
+  Serial.println("Back");\
+}
+********************************
+The moveBack() function sets the 1N2 and IN3 pins to high and the IN1 and IN4 pins to low. This causes the left and right wheels to both move backward.
+********************************
+********************************
+void moveLeft(){\
+  analogWrite(ENA, carSpeed2);\
+  analogWrite(ENB, carSpeed2);\
+  digitalWrite(IN1, LOW);\
+  digitalWrite(IN2, HIGH);\
+  digitalWrite(IN3, LOW);\
+  digitalWrite(IN4, HIGH);\
+  Serial.println("Left");\
+}
+********************************
+The moveLeft() function sets the IN2 and IN4 pins to high and the IN1 and IN3 pins to low. This causes the left wheel to move backward and the right wheel to move forward. This makes the car turn left.
+********************************
+********************************
