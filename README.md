@@ -105,3 +105,7 @@ void loop() {
 }
 
 ********************************
+The loop() function uses the ultrasonic sensor to determine which movement function to run. It relies on the distance from the sensor to the object to determine which function is run.\
+The loop() function uses if/else statements.
+********************************
+********************************
