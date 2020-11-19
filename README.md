@@ -44,8 +44,62 @@ int IN4 = 3;\
 #define carSpeed2 155\
 int rightDistance = 0, leftDistance = 0;
 *************************
-This portion of the code declares the Trig and Echo pins on the ultrasonic sensor, and it declares the motor pins on the L298N board.\\
-After the pins are declared, carSpeed and carSpeed2 are defined. carSpeed represents the speed the motors drive forward and backwards, and carSpeed2 represents the motors'turn speed.\\
+This portion of the code declares the Trig and Echo pins on the ultrasonic sensor, and it declares the motor pins on the L298N board.\
+
+After the pins are declared, carSpeed and carSpeed2 are defined. carSpeed represents the speed the motors drive forward and backwards, and carSpeed2 represents the motors'turn speed.\
+
 Lastly, rightDistance and leftDistance are declared and set to zero.
 *************************
 *************************
+void setup() {\
+  myservo.attach(10);\
+  Serial.begin(9600);\
+  pinMode(Echo, INPUT);\
+  pinMode(Trig, OUTPUT);\
+  pinMode(IN1, OUTPUT);\
+  pinMode(IN2, OUTPUT);\
+  pinMode(IN3, OUTPUT);\
+  pinMode(IN4, OUTPUT);\
+  pinMode(ENA, OUTPUT);\
+  pinMode(ENB, OUTPUT);\
+  stop();\
+  digitalWrite(ENA, HIGH);\
+  digitalWrite(ENB, HIGH);\
+}
+*************************
+The setup() function sets the servo motor to pin 10 on the Arduino, initializes the serial monitor that displays the sensor's commands, and sets each pin to output except for Echo which is an input. Then, the ENA and ENB pins are set to high.
+*************************
+*************************
+void loop() {\
+
+  servo.write(60);\
+  delay(200);\
+  rightDistance = Distance_test();\
+
+  servo.write(120);\
+  delay(200);\
+  leftDistance = Distance_test();\
+
+  if((rightDistance > 70)&&(leftDistance > 70)){\
+    stop();\
+  }\
+  else if((rightDistance >= 20)&&(leftDistance >= 20)){\
+    moveForward();\
+  }\
+  else if((rightDistance <= 10)&&(leftDistance <= 10)){\
+    moveBack();\
+    delay(100);\
+  }\
+  else if(rightDistance - 3 > leftDistance){\
+    moveLeft();\
+    delay(100);\
+  }\
+  else if(rightDistance + 3 < leftDistance){\
+    moveRight();\
+    delay(100);\
+  }\
+  else{\
+    stop();\
+  }\
+
+}
