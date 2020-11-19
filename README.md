@@ -44,8 +44,8 @@ int IN4 = 3;\
 #define carSpeed2 155\
 int rightDistance = 0, leftDistance = 0;
 *************************
-This portion of the code declares the Trig and Echo pins on the ultrasonic sensor, and it declares the motor pins on the L298N board.\
-After the pins are declared, carSpeed and carSpeed2 are defined. carSpeed represents the speed the motors drive forward and backwards, and carSpeed2 represents the motors'turn speed.\
+This portion of the code declares the Trig and Echo pins on the ultrasonic sensor, and it declares the motor pins on the L298N board.\\
+After the pins are declared, carSpeed and carSpeed2 are defined. carSpeed represents the speed the motors drive forward and backwards, and carSpeed2 represents the motors'turn speed.\\
 Lastly, rightDistance and leftDistance are declared and set to zero.
 *************************
 *************************
